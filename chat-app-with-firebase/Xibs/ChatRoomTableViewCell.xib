@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellId" rowHeight="157" id="hkQ-k2-YQV" customClass="ChatRoomTableViewCell" customModule="chat_app_with_firebase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="547" height="157"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hkQ-k2-YQV" id="ufx-jp-G0b">
+                <rect key="frame" x="0.0" y="0.0" width="547" height="157"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hirano" translatesAutoresizingMaskIntoConstraints="NO" id="sIs-8x-Pw1">
+                        <rect key="frame" x="15" y="48.5" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="sIs-8x-Pw1" secondAttribute="height" multiplier="1:1" id="2Xd-jr-Npn"/>
+                            <constraint firstAttribute="width" constant="60" id="IA3-XF-fUg"/>
+                        </constraints>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="ここにメッセージがはいります" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf4-lD-Pv7">
+                        <rect key="frame" x="85" y="25" width="250" height="107"/>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="250" id="ZKW-ZC-krK"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeR-yN-mHh">
+                        <rect key="frame" x="340" y="98" width="43" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Xf4-lD-Pv7" firstAttribute="bottom" secondItem="MeR-yN-mHh" secondAttribute="bottom" constant="13" id="9Sw-mC-0Wx"/>
+                    <constraint firstItem="sIs-8x-Pw1" firstAttribute="centerY" secondItem="ufx-jp-G0b" secondAttribute="centerY" id="Fra-et-zNb"/>
+                    <constraint firstItem="Xf4-lD-Pv7" firstAttribute="leading" secondItem="sIs-8x-Pw1" secondAttribute="trailing" constant="10" id="Kfz-rW-egi"/>
+                    <constraint firstItem="MeR-yN-mHh" firstAttribute="leading" secondItem="Xf4-lD-Pv7" secondAttribute="trailing" constant="5" id="SNL-ub-4O9"/>
+                    <constraint firstItem="sIs-8x-Pw1" firstAttribute="leading" secondItem="ufx-jp-G0b" secondAttribute="leading" constant="15" id="YhT-Wl-pGX"/>
+                    <constraint firstItem="Xf4-lD-Pv7" firstAttribute="top" secondItem="ufx-jp-G0b" secondAttribute="top" constant="25" id="gjy-1K-3NB"/>
+                    <constraint firstAttribute="bottom" secondItem="Xf4-lD-Pv7" secondAttribute="bottom" constant="25" id="sWe-Z4-ycy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="MeR-yN-mHh" id="2uo-pZ-SlF"/>
+                <outlet property="messageTextView" destination="Xf4-lD-Pv7" id="fj3-sH-RO9"/>
+                <outlet property="messageTextViewWidthConstraints" destination="ZKW-ZC-krK" id="pA6-ra-E5i"/>
+                <outlet property="userImageView" destination="sIs-8x-Pw1" id="DE1-tH-6ke"/>
+            </connections>
+            <point key="canvasLocation" x="-139.85507246376812" y="-9.7098214285714288"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="hirano" width="112.5" height="112.5"/>
+    </resources>
+</document>
